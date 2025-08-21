@@ -1,4 +1,19 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-//A continuación, el array inicial para almacenar amigos
+//El array inicial para almacenar amigos
 let amigos = [];
+
+function agregarAmigo() {
+//Captura el valor de entrada
+let input =  document.getElementById("amigo");
+//Sacar el valor y limpiarlo con trim
+let nombre = input.value.trim();
+// si esta vacio, manda alerta + return
+if (nombre === "") {
+    alert ("Por favor, inserta un nombre.");
+    return;
+//si no está vacio, push al array inicial
+    amigos.push(nombre);
+};
+// limpia la cajita
+input.value = "";
+}
 
