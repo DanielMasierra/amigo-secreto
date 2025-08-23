@@ -33,6 +33,7 @@ document.getElementById("listaAmigos").innerHTML = ganador;
 console.log (ganador);
  }
 
+ //funcion pintarLista para limpiar la lista y crear etiqueta li
 function pintarLista (){
     const lista = document.getElementById("listaAmigos");
     lista.innerHTML ="";
