@@ -10,10 +10,26 @@ let nombre = input.value.trim();
 if (nombre === "") {
     alert ("Por favor, inserta un nombre.");
     return;
-//si no está vacio, push al array inicial
-    amigos.push(nombre);
 };
+//si no está vacio, push al array inicial
+amigos.push(nombre);
+console.log(amigos);
 // limpia la cajita
 input.value = "";
 }
+
+//función para sortear amigo
+function sortearAmigo() {
+if (amigos.length === 0) {
+//manda alerta si no se escribió ningun nombre
+    alert ("No has escrito ningun nombre.");
+    return;
+}
+//calcular el índice aleatorio con el math.random
+let i = Math.floor(Math.random()*amigos.length);
+let ganador = amigos[i];
+document.getElementById("listaAmigos").innerHTML = ganador;
+console.log (ganador);
+ }
+
 
