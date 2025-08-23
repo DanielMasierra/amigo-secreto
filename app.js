@@ -16,6 +16,7 @@ amigos.push(nombre);
 console.log(amigos);
 // limpia la cajita
 input.value = "";
+pintarLista(); 
 }
 
 //función para sortear amigo
@@ -32,4 +33,13 @@ document.getElementById("listaAmigos").innerHTML = ganador;
 console.log (ganador);
  }
 
+function pintarLista (){
+    const lista = document.getElementById("listaAmigos");
+    lista.innerHTML ="";
+    for (let i = 0; i < amigos.length; i++) {
+        let li =document.createElement("li");
+        li.textContent = amigos[i];
+        lista.appendChild(li);
+    }
 
+}
